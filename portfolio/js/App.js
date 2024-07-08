@@ -45,7 +45,7 @@ app.controller('PfController',function($scope,$rootScope,$timeout){
                 year:'2022',
                 course:'Bachelor of Computer Sceince Engineering',
                 academy:'As-salam College of Engineering and Technology.',
-                place:'Thirumagalakudi',
+                place:'Thirumangalakudi',
                 percentage:'CGPA-8.74%'
             },
             {
@@ -58,14 +58,14 @@ app.controller('PfController',function($scope,$rootScope,$timeout){
             {
                 year:'2016',
                 course:'HSC',
-                academy:'Govt Boys Hr Sec School.',
+                academy:'Govt Boys Hr Sec School. ',
                 place:'Manalmedu',
                 percentage:'Percentage-56%'
             },
             {
                 year:'2014',
                 course:'SSLC',
-                academy:'Govt Boys Hr Sec School',
+                academy:'Govt Boys Hr Sec School. ',
                 place:'Manalmedu',
                 percentage:'Percentage-60%'
             }
