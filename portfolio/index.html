@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>R.Rajaguru</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+  </head>
+  <body ng-app="Portfolio" ng-controller="PfController" ng-class="{'dark-mode':Portfolio.theme}">
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> {{Portfolio.name}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item" ng-repeat="nav in Portfolio.Navbar">
+                        <a href="{{nav.url}}" class="nav-link"><span data-hover="{{nav.name}}">{{nav.name}}</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center" ng-click="PfOperation($event,'theme',Portfolio.theme)">
+                        <i class="color-mode-icon" ng-class="{'active':Portfolio.theme}"></i>
+                        <!-- Color mode -->
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">{{Portfolio.desc1}} <span class="mobile-block">{{Portfolio.desc2}}</span></small>
+                        <h2 class="animated animated-text">
+                            <span class="mr-2">{{Portfolio.desc3}}</span>
+                                <div class="animated-info">
+                                    <span class="animated-item animate-Text" ng-repeat="design in Portfolio.designation">{{design.role}}</span>
+                                    <!-- <span class="animated-item">Web Designer</span>
+                                    <span class="animated-item">UI Specialist</span> -->
+                                </div>
+                        </h2>
+                        <p>{{Portfolio.desc4}}</p>
+                        <div class="custom-btn-group mt-4">
+                          <a href="../resume/RAJAGURU.R_.pdf" target="_blank" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> {{Portfolio.downtext}}</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">{{Portfolio.quettext}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/undraw/home-right.png" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section class="project py-5" id="service">
+      <div class="container">              
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="col-lg-8 mx-auto">
+                    <h2>Services</h2>
+                  </div>
+                  <div class="cards">
+                    <div class="card red col-md-4">
+                      <img src="../images/project/icon/webdesign.png" class="icon-img-logo" alt="Web Design">
+                      <p class="tip ">Web Designing</p>
+                    </div>
+                    <div class="card blue col-md-4">
+                      <img src="../images/project/icon/softwaredevelopment.png" class="icon-img-logo" alt="Software Development">
+                      <p class="tip">Software Development</p>
+                    </div>
+                    <div class="card green col-md-4">
+                      <img src="../images/project/icon/service.png" class="icon-img-logo" alt="Hardware and Services">
+                      <p class="tip">Hardware and Services</p>
+                    </div>
+                  </div>                    
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="cards">
+                    <div class="card red col-md-6">
+                      <img src="../images/project/icon/photography.png" class="icon-img-logo" alt="Photography">
+                      <p class="tip">Photography</p>
+                    </div>
+                    <div class="card blue col-md-6">
+                      <img src="../images/project/icon/Typing1.png" class="icon-img-logo" alt="Typing Writting">
+                      <p class="tip">Type Writting</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+  </section>
+    <section class="project py-5" id="skils">
+      <div class="container">              
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="col-lg-8 mx-auto">
+                    <h2>Technical Knowledge</h2>
+                  </div>
+                  <div class="cards">
+                    <div class="card red col-md-4">
+                      <img src="../images/project/icon/html.png" class="icon-img-logo" alt="html">
+                    </div>
+                    <div class="card blue col-md-4">
+                      <img src="../images/project/icon/css.png" class="icon-img-logo" alt="css">
+                    </div>
+                    <div class="card green col-md-4">
+                      <img src="../images/project/icon/javascript.png" class="icon-img-logo" alt="css">
+                    </div>
+                  </div>         
+                      
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="cards">
+                    <div class="card red col-md-4">
+                      <img src="../images/project/icon/jquery.png" class="icon-img-logo" alt="jquery">
+                    </div>
+                    <div class="card blue col-md-4">
+                      <img src="../images/project/icon/angularjs.png" class="icon-img-logo" alt="angularjs">
+                    </div>
+                    <div class="card green col-md-4">
+                      <img src="../images/project/icon/java.png" class="icon-img-logo" alt="java">
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="cards">
+                    <div class="card red col-md-4">
+                      <img src="../images/project/icon/dotnet.png" class="icon-img-logo" alt="donet">
+                    </div>
+                    <div class="card blue col-md-4">
+                      <img src="../images/project/icon/sql.png" class="icon-img-logo" alt="sqlserver">
+                    </div>
+                    <div class="card green col-md-4">
+                      <img src="../images/project/icon/C_Pro.png" class="icon-img-logo" alt="java">
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div class="row hide">
+                <div class="col-lg-12 text-center mx-auto col-12">
+                  <div class="cards">
+                    <div class="card red col-md-12">
+                      <img src="../images/project/icon/typing.png" class="icon-img-logo" alt="typing">
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 te">Experiences</h2>
+                    <div class="timeline" >
+                        <div class="timeline-wrapper" ng-repeat="exp in Portfolio.experience">
+                             <div class="timeline-yr">
+                                  <span>{{exp.year}}</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>{{exp.desing}}</span><small>{{exp.role}}</small></h3>
+                                  <p>{{exp.company}}{{exp.place}}</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+                    <div class="timeline">
+                        <div class="timeline-wrapper" ng-repeat="edu in Portfolio.education">
+                             <div class="timeline-yr">
+                                  <span>{{edu.year}}</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>{{edu.course}}</span></h3>
+                                  <p>{{edu.academy}}{{edu.place}}</p>
+                                  <p>{{edu.percentage}}</p>                                  
+                             </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17028.04261674671!2d79.66597813997885!3d11.190742769675543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720436888480!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">{{Portfolio.mobileno}}</p>
+                  <p><a href="mailto:{{Portfolio.gmail}}">{{Portfolio.gmail}}</a></p>
+                </div>
+           </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer py-5 hide">
+          <div class="container">
+               <div class="row">
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2024. All rights reserved</p>
+                      </div>                    
+               </div>
+          </div>
+    </footer>
+    <!-- FOOTER -->
+    <script src="js/angular_1.4.5.min.js"></script>    
+    <script src="js/PerfectScrollbar/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/App.js"></script>
+
+  </body>
+</html>
