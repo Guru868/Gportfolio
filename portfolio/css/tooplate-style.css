@@ -490,7 +490,7 @@ b, strong {
     padding-bottom: 4rem;
   }
 
-  .color-mode {
+  .color-mode-change {
     display: none;
   }
 
@@ -525,7 +525,9 @@ b, strong {
     text-align: center;
     padding-bottom: 20px;
   }
-
+  .dark-mode .navbar-collapse{
+    background: #474559;
+  }
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
   }
